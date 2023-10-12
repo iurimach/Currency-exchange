@@ -1,0 +1,129 @@
+
+
+
+ 
+ 
+<div class="wrapper">
+   <div class="header">
+      <div class="content">
+        <h2>The app works in real time </h2>
+        <h2>The app works in real time </h2>
+    </div>
+  </div>
+  <div>
+    
+    <select id="options" [(ngModel)]="selectedOption" class="select">
+      <option value="option0" >აირჩიე კონვერტაცია - auswahlen </option>
+      <option value="option1">ევრო - EUR </option>
+      <option value="option2">დოლარი-USD </option>
+      <option value="option3">რუბლი-RYB </option>
+      <option value="option4">ლირა -TRY </option>
+      <option value="option5">პოლონური ზლოტი -Pln </option>
+      <option value="option6">სომხური დრამი - AMD </option>
+      <option value="option7">კანადური დოლარი - CAD </option>
+      <option value="option8">ინდური რუპია -INR </option>
+      <option value="option9">ჩინური იუანი - CNY </option>
+      <option value="option10">გირვანქა სტერლინგი - GBP </option>
+      <option value="option11">იაპონური იენი - JPY </option>
+      <option value="option12">უკრაინული გრივნა -UAH </option>
+    </select>
+    <label class="label1" for="options" id="animate-charcter">Convert to Gel : </label>
+  </div>
+  
+  <!-- // aq gausvebs swichs romelic udris selectoptions  -->
+  <div [ngSwitch]="selectedOption">
+   
+        <div *ngSwitchDefault>      
+          
+         </div>
+       
+         <div *ngSwitchCase="'option1'" class="convert-div">
+            <div *ngFor="let obj of exchangeData | keyvalue" class="divchild">
+      
+              {{obj.key}}-{{ obj.value }}
+            </div>
+          </div>
+
+        
+
+
+        <div *ngSwitchCase="'option2'" class="convert-div">
+          <div *ngFor="let obj of DataUSD | keyvalue" class="divchild">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+
+        </div>
+        
+        <div *ngSwitchCase="'option3'"class="convert-div">
+          <div *ngFor="let obj of DataRUB | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'option4'"class="convert-div">
+          <div *ngFor="let obj of  DataTRY | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'option5'"class="convert-div">
+          <div *ngFor="let obj of  DataPLN | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'option6'"class="convert-div">
+          <div *ngFor="let obj of  DataAMD | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'option7'"class="convert-div">
+          <div *ngFor="let obj of  DataCAD | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+        <div *ngSwitchCase="'option8'"class="convert-div">
+          <div *ngFor="let obj of  DataINR | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'option9'"class="convert-div">
+          <div *ngFor="let obj of  DataCNY | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+
+        <div *ngSwitchCase="'option10'"class="convert-div">
+          <div *ngFor="let obj of  DataGBP | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+        <div *ngSwitchCase="'option11'"class="convert-div">
+          <div *ngFor="let obj of  DataJPY | keyvalue">
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+        <div *ngSwitchCase="'option12'"class="convert-div">
+          <div *ngFor="let obj of  DataUAH | keyvalue" >
+    
+            {{obj.key}}-{{ obj.value }}
+          </div>
+        </div>
+
+
+
+     </div>
+        
+</div>
